@@ -26,7 +26,17 @@
 *.a
 *.lib
 
+# sprawozdania
+*.doc
+*.docx
+*.xls
+*.xlsx
+
 # Executables
 *.exe
 *.out
 *.app
+
+#arhiwa
+*.zip
+*.rar
