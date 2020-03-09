@@ -5,6 +5,9 @@ close
 load("wyniki.txt");
 load("wyniki2.txt");
 
+min(wyniki2)
+max(wyniki2)
+
 stairs(wyniki(:,1),wyniki(:,2));
 figure
 stairs(wyniki(:,1),wyniki(:,3));

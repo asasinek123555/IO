@@ -31,6 +31,7 @@ namespace ton
 			}
 			short kwantyzuj(double x)
 			{
+				if(x<-(1.0-(1.0/(double)SHRT_MAX))) return SHRT_MIN;
 				for(short i=SHRT_MIN;x>-1;i++)
 				{
 					x-=1.0/(double)SHRT_MAX;
@@ -57,6 +58,7 @@ namespace ton
 			}
 			short kwantyzuj(double x)
 			{
+				if(x<-(1.0-(1.0/(double)pow(2,8)))) return -255;
 				for(short i=-pow(2,8);x>-1;i++)
 				{
 					x-=1.0/(double)pow(2,8);
