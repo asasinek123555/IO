@@ -76,5 +76,6 @@ int main()
 		//cout<<setw(8)<<i<<setw(11)<<fixed<<x(i)<<setw(11)<<fixed<<y(i)<<setw(11)<<fixed<<z(i)<<setw(12)<<fixed<<u(i)<<setw(10)<<fixed<<v(i)<<setw(11)<<fixed<<yy(i)<<endl;
 		wyjscie<<i<<" "<<fixed<<setprecision(20)<<x(i)<<" "<<fixed<<setprecision(20)<<y(i)<<" "<<fixed<<setprecision(20)<<z(i)<<" "<<fixed<<setprecision(20)<<u(i)<<" "<<fixed<<setprecision(20)<<v(i)<<" "<<fixed<<setprecision(20)<<p(i)<<endl;
 	}
+	wyjscie.close();
 	return 0;
 }
