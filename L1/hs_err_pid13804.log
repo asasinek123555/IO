@@ -1,0 +1,155 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=13804, tid=0x00000000000038dc
+#
+# JRE version:  (8.0_152-b16) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.152-b16 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000030fe800):  JavaThread "Unknown thread" [_thread_in_vm, id=14556, stack(0x0000000003100000,0x0000000003200000)]
+
+Stack: [0x0000000003100000,0x0000000003200000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000030fe800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=14556, stack(0x0000000003100000,0x0000000003200000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5f80000, 0x00000000d8a00000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5f80000,0x00000000d6026670,0x00000000d8000000)
+  from space 5120K, 0% used [0x00000000d8500000,0x00000000d8500000,0x00000000d8a00000)
+  to   space 5120K, 0% used [0x00000000d8000000,0x00000000d8000000,0x00000000d8500000)
+ ParOldGen       total 87552K, used 0K [0x0000000081e00000, 0x0000000087380000, 0x00000000d5f80000)
+  object space 87552K, 0% used [0x0000000081e00000,0x0000000081e00000,0x0000000087380000)
+ Metaspace       used 746K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000126d0000,0x0000000012ad0000] byte_map_base: 0x00000000122c1000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005bfd0860
+ Begin Bits: [0x0000000013180000, 0x0000000015108000)
+ End Bits:   [0x0000000015108000, 0x0000000017090000)
+
+Polling page: 0x00000000013e0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000003310000, 0x0000000003580000, 0x0000000012310000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.046 loading class java/lang/Short
+Event: 0.046 loading class java/lang/Short done
+Event: 0.046 loading class java/lang/Integer
+Event: 0.046 loading class java/lang/Integer done
+Event: 0.046 loading class java/lang/Long
+Event: 0.046 loading class java/lang/Long done
+Event: 0.047 loading class java/lang/NullPointerException
+Event: 0.047 loading class java/lang/NullPointerException done
+Event: 0.047 loading class java/lang/ArithmeticException
+Event: 0.047 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff6d07e0000 - 0x00007ff6d0817000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\java.exe
+0x00007ffb4a520000 - 0x00007ffb4a710000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb48ef0000 - 0x00007ffb48fa2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffb47550000 - 0x00007ffb477f3000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffb499e0000 - 0x00007ffb49a83000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffb4a3c0000 - 0x00007ffb4a45e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffb491c0000 - 0x00007ffb49257000 	C:\Windows\System32\sechost.dll
+0x00007ffb48c30000 - 0x00007ffb48d50000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffb48d50000 - 0x00007ffb48ee4000 	C:\Windows\System32\USER32.dll
+0x00007ffb47850000 - 0x00007ffb47871000 	C:\Windows\System32\win32u.dll
+0x00007ffb49950000 - 0x00007ffb49976000 	C:\Windows\System32\GDI32.dll
+0x00007ffb47a50000 - 0x00007ffb47be4000 	C:\Windows\System32\gdi32full.dll
+0x00007ffb474b0000 - 0x00007ffb4754e000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffb47880000 - 0x00007ffb4797a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffb35eb0000 - 0x00007ffb36135000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.657_none_e6c5b579130e3898\COMCTL32.dll
+0x00007ffb49a90000 - 0x00007ffb49dc6000 	C:\Windows\System32\combase.dll
+0x00007ffb48550000 - 0x00007ffb485d0000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffb48fc0000 - 0x00007ffb48fee000 	C:\Windows\System32\IMM32.DLL
+0x000000005b6d0000 - 0x000000005b7a2000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\msvcr100.dll
+0x000000005b7b0000 - 0x000000005c050000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\server\jvm.dll
+0x00007ffb48c20000 - 0x00007ffb48c28000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffb43c50000 - 0x00007ffb43c74000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb35460000 - 0x00007ffb35469000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffb37490000 - 0x00007ffb3749a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffb48af0000 - 0x00007ffb48b5f000 	C:\Windows\System32\WS2_32.dll
+0x00007ffb43c10000 - 0x00007ffb43c3d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffb47800000 - 0x00007ffb4784a000 	C:\Windows\System32\cfgmgr32.dll
+0x000000005b6c0000 - 0x000000005b6cf000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\verify.dll
+0x000000005b690000 - 0x000000005b6b9000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\java.dll
+0x000000005b670000 - 0x000000005b686000 	C:\Program Files\MATLAB\R2018b\sys\java\jre\win64\jre\bin\zip.dll
+
+VM Arguments:
+java_command: com.mathworks.fatalexit.FatalExitFrame C:\Users\Przemek\AppData\Local\Temp\matlab_crash_dump.9364-1 -segvURL https://udc-service.mathworks.com/udc/service/v1 -mweInstall C:\Program Files\MATLAB\R2018b -logfile Java Crash Report=C:\Users\Przemek\AppData\Local\Temp\hs_error_pid9364.log -desktopOS Microsoft Windows 10 Pro -desktopPlatform win64 -installationId 70bed6de-b7e8-418a-98d4-24ee5132c1b3 -machineHash e7a192c7eb3b0b74974b925f5bcb2a8d -releaseFamily R2018b -sessionKey 90ae25ab-a41d-4271-a67d-635a9f5895a0 -version 9.5.0.1265761 (R2018b) Update 6 -optIn
+java_class_path (initial): C:\Program Files\MATLAB\R2018b\java\jar/fatalexit.jar;C:\Program Files\MATLAB\R2018b\java\jar/mlwebservices.jar;C:\Program Files\MATLAB\R2018b\java\jar/net.jar;C:\Program Files\MATLAB\R2018b\java\jar/webproxy.jar;C:\Program Files\MATLAB\R2018b\java\jarext/webservices/udc_client/udc_client.jar;C:\Program Files\MATLAB\R2018b\java\jarext/webservices/urlmanager/urlmanager.jar;C:\Program Files\MATLAB\R2018b\java\jarext/webservices/ws_client_core/mw-service-client-core.jar;C:\Program Files\MATLAB\R2018b\java\jarext/commons-cli.jar;C:\Program Files\MATLAB\R2018b\java\jarext/commons-codec.jar;C:\Program Files\MATLAB\R2018b\java\jarext/commons-io.jar;C:\Program Files\MATLAB\R2018b\java\jarext/commons-lang.jar;C:\Program Files\MATLAB\R2018b\java\jarext/commons-logging.jar;C:\Program Files\MATLAB\R2018b\java\jarext/jgoodies-looks.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/activation.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axiom-api.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axiom-impl.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axis2-adb.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axis2-kernel.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axis2-transport-http.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/axis2-transport-local.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/commons-httpclient.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/geronimo-stax-api.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/httpcore.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/mail.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/neethi.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/wsdl4j.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/wstx-asl.jar;C:\Program Files\MATLAB\R2018b\java\jarext/axis2/XmlSchema.jar;C:\Program Files\MATLAB\R2018b\java\jar/ja_JP/fatalexit_res.jar;C:\Program Files\MATLAB\R2018b\java\jar/zh_CN/fatalexit_res.jar;C:\Program Files\MATLAB\R2018b\
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\MATLAB\R2018b\bin\win64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Python36\Scripts\;C:\Program Files\Python36\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\MinGW\bin;C:\android-sdk;C:\PentestBox;C:\xampp\php;C:\xampp\perl;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2018b\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\compiler\bin;D:\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Windows Kits\10\Microsoft Application Virtualization\Sequencer\;C:\nasm-2.14.02;C:\Program Files\Git\cmd;C:\Users\Przemek\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Przemek\.dotnet\tools;C:\Users\Przemek\AppData\Roaming\npm
+USERNAME=Przemek
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8263520k(918172k free), swap 8263520k(5340k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.152-b16) for windows-amd64 JRE (1.8.0_152-b16), built on Sep 14 2017 02:29:36 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Mar 09 13:09:39 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
